@@ -57,33 +57,6 @@
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        lessthan_comma: lessthan_comma {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LESSTHAN_COMMA";
-            bindings = <&kp LESS_THAN>, <&kp KP_COMMA>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
-        greaterthan_dot: greaterthan_dot {
-            compatible = "zmk,behavior-mod-morph";
-            label = "GREATERTHAN_DOT";
-            bindings = <&kp GREATER_THAN>, <&kp KP_DOT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
-        colon_semi: colon_semi {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COLON_SEMI";
-            bindings = <&kp COLON>, <&kp SEMI>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
         v_lbrace: v_lbrace {
             compatible = "zmk,behavior-mod-morph";
             label = "V_LBRACE";
@@ -101,31 +74,37 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI)>;
         };
+
+        j_equals: j_equals {
+            compatible = "zmk,behavior-mod-morph";
+            label = "J_EQUALS";
+            bindings = <&kp J>, <&kp KP_EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        u_greaterthan: u_greaterthan {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_GREATERTHAN";
+            bindings = <&kp U>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        k_lessthan: k_lessthan {
+            compatible = "zmk,behavior-mod-morph";
+            label = "K_LESSTHAN";
+            bindings = <&kp K>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
     };
 
     combos {
         compatible = "zmk,combos";
-
-        c-f-eq {
-            bindings = <&kp KP_EQUAL>;
-            key-positions = <41 34>;
-            timeout-ms = <500>;
-            layers = <0>;
-        };
-
-        c-f-gt {
-            bindings = <&kp GREATER_THAN>;
-            key-positions = <23 34>;
-            timeout-ms = <500>;
-            layers = <0>;
-        };
-
-        c-f-lt {
-            bindings = <&kp LESS_THAN>;
-            key-positions = <42 34>;
-            timeout-ms = <500>;
-            layers = <0>;
-        };
 
         c-f-plus {
             bindings = <&kp KP_PLUS>;
@@ -220,11 +199,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5     &tog 1                                                                                  &mo 3                                  &kp N6  &kp N7  &kp N8           &l_paren_nine     &r_paren_zero  &under_minus
-&kp DEL    &kp Q      &kp W     &kp E     &kp R      &kp T      &kt RG(RC(LEFT_SHIFT))                                                                  &kt LG(LC(LEFT_SHIFT))                 &kp Y   &kp U   &kp I            &kp O             &kp P          &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G      &mt RG(RC(RIGHT_ALT)) RG(RC(RIGHT_ALT))  &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &mt LG(LC(LEFT_ALT)) LG(LC(LEFT_ALT))  &kp H   &kp J   &kp K            &kp L             &colon_semi    &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &v_lbrace  &b_rbrace                                                      &kp HOME      &kp PG_UP                                                    &kp N   &kp M   &lessthan_comma  &greaterthan_dot  &kp FSLH       &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT             &kp BSPC                                 &kp TAB    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE                                      &kp UP  &kp DOWN         &kp LBKT          &kp RBKT       &mo 2
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5     &tog 1                                                                                  &mo 3                                  &kp N6  &kp N7          &kp N8       &l_paren_nine  &r_paren_zero  &under_minus
+&kp DEL    &kp Q      &kp W     &kp E     &kp R      &kp T      &kt RG(RC(LEFT_SHIFT))                                                                  &kt LG(LC(LEFT_SHIFT))                 &kp Y   &u_greaterthan  &kp I        &kp O          &kp P          &kp BSLH
+&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G      &mt RG(RC(RIGHT_ALT)) RG(RC(RIGHT_ALT))  &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &mt LG(LC(LEFT_ALT)) LG(LC(LEFT_ALT))  &kp H   &j_equals       &k_lessthan  &kp L          &kp SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C     &v_lbrace  &b_rbrace                                                      &kp HOME      &kp PG_UP                                                    &kp N   &kp M           &kp COMMA    &kp DOT        &kp FSLH       &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT             &kp BSPC                                 &kp TAB    &kp END       &kp PG_DN  &kp ENTER  &kp SPACE                                      &kp UP          &kp DOWN     &kp LBKT       &kp RBKT       &mo 2
             >;
         };
 
