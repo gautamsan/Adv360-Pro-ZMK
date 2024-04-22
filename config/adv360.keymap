@@ -83,10 +83,10 @@
             mods = <(MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
 
-        u_greaterthan: u_greaterthan {
+        u_and_7: u_and_7 {
             compatible = "zmk,behavior-mod-morph";
-            label = "U_GREATERTHAN";
-            bindings = <&kp U>, <&kp GREATER_THAN>;
+            label = "U_AND_7";
+            bindings = <&kp U>, <&kp KP_N7>;
 
             #binding-cells = <0>;
             mods = <(MOD_RCTL|MOD_RALT|MOD_RGUI)>;
@@ -146,10 +146,10 @@
             mods = <(MOD_RALT|MOD_RGUI|MOD_RCTL)>;
         };
 
-        i_plus: i_plus {
+        i_and_8: i_and_8 {
             compatible = "zmk,behavior-mod-morph";
-            label = "I_PLUS";
-            bindings = <&kp I>, <&kp KP_PLUS>;
+            label = "I_AND_8";
+            bindings = <&kp I>, <&kp KP_N8>;
 
             #binding-cells = <0>;
             mods = <(MOD_RALT|MOD_RGUI|MOD_RCTL)>;
@@ -181,6 +181,33 @@
             #binding-cells = <0>;
             mods = <(MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
+
+        y_and_6: y_and_6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Y_AND_6";
+            bindings = <&kp Y>, <&kp KP_N6>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        o_and_ampersand: o_and_ampersand {
+            compatible = "zmk,behavior-mod-morph";
+            label = "O_AND_AMPERSAND";
+            bindings = <&kp O>, <&kp AMPERSAND>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        p_and_multiply: p_and_multiply {
+            compatible = "zmk,behavior-mod-morph";
+            label = "P_AND_MULTIPLY";
+            bindings = <&kp P>, <&kp KP_MULTIPLY>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -193,11 +220,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3       &kp N4       &kp N5  &tog 1                                                                                    &mo 3                                  &kp N6    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &l_paren_nine  &r_paren_zero  &under_minus
-&kp DEL    &kp Q      &kp W     &e_lparen    &r_rparen    &kp T   &kp RG(RC(RIGHT_SHIFT))                                                                   &kp LG(LC(LEFT_SHIFT))                 &kp Y     &u_greaterthan    &i_plus            &o_minus       &kp P          &kp BSLH
-&kp ESC    &kp A      &kp S     &d_lbracket  &f_rbracket  &kp G   &mt RG(RC(RIGHT_ALT)) RG(RC(RIGHT_ALT))  &kp LSHIFT  &kp LALT      &kp LGUI   &kp RSHIFT  &mt LG(LC(LEFT_ALT)) LG(LC(LEFT_ALT))  &h_under  &j_equals         &k_lessthan        &kp L          &kp SEMICOLON  &kp SQT
-&kp LCTRL  &kp Z      &kp X     &kp C        &kp V        &kp B                                                        &kp HOME      &kp PG_UP                                                     &n_div    &kp M             &kp COMMA          &kp DOT        &kp FSLH       &kp RCTRL
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT     &kp RIGHT            &kp BSPC                                 &kp TAB     &kp END       &kp PG_DN  &kp ENTER   &kp SPACE                                        &kp UP            &kp DOWN           &kp N7         &kp N8         &mo 2
+&kp NUMBER_6  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                                    &mo 3                                  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &l_paren_nine     &r_paren_zero    &kp BACKSLASH
+&kp DEL       &kp Q      &kp W     &kp E     &kp R      &kp T   &kp RG(RC(RIGHT_SHIFT))                                                                   &kp LG(LC(LEFT_SHIFT))                 &y_and_6   &u_and_7          &i_and_8           &o_and_ampersand  &p_and_multiply  &under_minus
+&kp ESC       &kp A      &kp S     &kp D     &kp F      &kp G   &mt RG(RC(RIGHT_ALT)) RG(RC(RIGHT_ALT))  &kp LSHIFT  &kp LALT      &kp LGUI   &kp RSHIFT  &mt LG(LC(LEFT_ALT)) LG(LC(LEFT_ALT))  &h_under   &j_equals         &kp K              &kp L             &kp SEMICOLON    &kp SQT
+&kp LCTRL     &kp Z      &kp X     &kp C     &kp V      &kp B                                                        &kp HOME      &kp PG_UP                                                     &n_div     &kp M             &kp COMMA          &kp DOT           &kp FSLH         &kp RCTRL
+&mo 2         &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC                                 &kp TAB     &kp END       &kp PG_DN  &kp ENTER   &kp SPACE                                         &kp UP            &kp DOWN           &kp N7            &kp N8           &mo 2
             >;
         };
 
