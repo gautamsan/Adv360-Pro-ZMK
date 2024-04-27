@@ -17,20 +17,6 @@
             bindings = <&kp RET>;
         };
 
-        backslash: backslash {
-            compatible = "zmk,behavior-macro";
-            label = "BACKSLASH";
-            #binding-cells = <0>;
-            bindings = <&kp BSLH>;
-        };
-
-        caret: caret {
-            compatible = "zmk,behavior-macro";
-            label = "CARET";
-            #binding-cells = <0>;
-            bindings = <&kp CARET>;
-        };
-
         #endif
 
         hm: homerow_mods {
@@ -55,7 +41,7 @@
         r_paren_caret: r_paren_caret {
             compatible = "zmk,behavior-mod-morph";
             label = "R_PAREN_CARET";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&caret>;
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp CARET>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
@@ -244,7 +230,7 @@
         dot_backslash: dot_backslash {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_BACKSLASH";
-            bindings = <&kp KP_DOT>, <&backslash>;
+            bindings = <&kp KP_DOT>, <&kp BACKSLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
