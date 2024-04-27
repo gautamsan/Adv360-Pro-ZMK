@@ -318,7 +318,19 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        shift-space-enter {
+            bindings = <&kp ENTER>;
+            key-positions = <35 70>;
+        };
+
+        shift-backspace-esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <38 65>;
+        };
+    };
 
     macros {
     };
