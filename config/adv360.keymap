@@ -29,19 +29,19 @@
             bindings = <&kp>, <&kp>;
         };
 
-        l_paren_ampersand: l_paren_ampersand {
+        l_paren_caret: l_paren_caret {
             compatible = "zmk,behavior-mod-morph";
-            label = "L_PAREN_AMPERSAND";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp AMPERSAND>;
+            label = "L_PAREN_CARET";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp CARET>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        r_paren_caret: r_paren_caret {
+        r_paren_ampersand: r_paren_ampersand {
             compatible = "zmk,behavior-mod-morph";
-            label = "R_PAREN_CARET";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp CARET>;
+            label = "R_PAREN_AMPERSAND";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp AMPERSAND>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
@@ -191,24 +191,6 @@
             mods = <(MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
 
-        o_and_ampersand: o_and_ampersand {
-            compatible = "zmk,behavior-mod-morph";
-            label = "O_AND_AMPERSAND";
-            bindings = <&kp O>, <&kp AMPERSAND>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_RALT|MOD_RGUI)>;
-        };
-
-        p_and_multiply: p_and_multiply {
-            compatible = "zmk,behavior-mod-morph";
-            label = "P_AND_MULTIPLY";
-            bindings = <&kp P>, <&kp KP_MULTIPLY>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_RALT|MOD_RGUI)>;
-        };
-
         greaterthan_percent: greaterthan_percent {
             compatible = "zmk,behavior-mod-morph";
             label = "GREATERTHAN_PERCENT";
@@ -221,25 +203,25 @@
         lessthan_dollar: lessthan_dollar {
             compatible = "zmk,behavior-mod-morph";
             label = "LESSTHAN_DOLLAR";
-            bindings = <&kp LESS_THAN>, <&kp KP_NUMBER_4>;
+            bindings = <&kp LESS_THAN>, <&kp DOLLAR>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        dot_backslash: dot_backslash {
+        pipe_backslash: pipe_backslash {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOT_BACKSLASH";
-            bindings = <&kp KP_DOT>, <&kp BACKSLASH>;
+            label = "PIPE_BACKSLASH";
+            bindings = <&kp PIPE>, <&kp BACKSLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        pound_star: pound_star {
+        pound_Ins: pound_Ins {
             compatible = "zmk,behavior-mod-morph";
-            label = "POUND_STAR";
-            bindings = <&kp POUND>, <&kp KP_ASTERISK>;
+            label = "POUND_INS";
+            bindings = <&kp POUND>, <&kp INSERT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -316,6 +298,15 @@
             #binding-cells = <0>;
             mods = <(MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
+
+        multiply_and_printscr: multiply_and_printscr {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MULTIPLY_AND_PRINTSCR";
+            bindings = <&kp KP_MULTIPLY>, <&kp PRINTSCREEN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -328,21 +319,21 @@
 
         default_layer {
             bindings = <
-&kp GRAVE  &bang_at                    &under_minus  &pound_star  &lessthan_dollar  &greaterthan_percent  &tog 1                                                                                    &mo 3                                  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &l_paren_ampersand  &r_paren_caret   &kp KP_MULTIPLY
-&kp DEL    &q_and_1                    &w_and_2      &e_and_3     &r_and_4          &t_and_5              &kp RG(RC(RIGHT_SHIFT))                                                                   &kp LG(LC(LEFT_SHIFT))                 &y_and_6   &u_and_7          &i_and_8           &o_and_9            &p_and_0         &kp PIPE
-&kp ESC    &kp A                       &kp S         &kp D        &kp F             &kp G                 &mt RG(RC(RIGHT_ALT)) RG(RC(RIGHT_ALT))  &kp LSHIFT  &kp LALT      &kp LGUI   &kp RSHIFT  &mt LG(LC(LEFT_ALT)) LG(LC(LEFT_ALT))  &kp H      &kp J             &kp K              &kp L               &kp SEMICOLON    &kp SQT
-&kp LCTRL  &kp Z                       &kp X         &kp C        &kp V             &kp B                                                                      &kp HOME      &kp PG_UP                                                     &kp N      &kp M             &kp COMMA          &dot_backslash      &kp FSLH         &kp RCTRL
-&mo 2      &kp LA(LC(LG(LEFT_SHIFT)))  &kp CAPS      &kp LEFT     &kp RIGHT                               &kp BSPC                                 &kp TAB     &kp END       &kp PG_DN  &kp ENTER   &kp SPACE                                         &kp UP            &kp DOWN           &kp KP_NUMBER_9     &kp KP_NUMBER_0  &mo 2
+&kp GRAVE  &bang_at                    &under_minus  &pound_Ins  &lessthan_dollar  &greaterthan_percent  &tog 1                                                                                    &mo 3                                  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &l_paren_caret   &r_paren_ampersand  &multiply_and_printscr
+&kp DEL    &q_and_1                    &w_and_2      &e_and_3    &r_and_4          &t_and_5              &kp RG(RC(RIGHT_SHIFT))                                                                   &kp LG(LC(LEFT_SHIFT))                 &y_and_6   &u_and_7          &i_and_8           &o_and_9         &p_and_0            &pipe_backslash
+&kp ESC    &kp A                       &kp S         &kp D       &kp F             &kp G                 &mt RG(RC(RIGHT_ALT)) RG(RC(RIGHT_ALT))  &kp LSHIFT  &kp LALT      &kp LGUI   &kp RSHIFT  &mt LG(LC(LEFT_ALT)) LG(LC(LEFT_ALT))  &kp H      &kp J             &kp K              &kp L            &kp SEMICOLON       &kp SQT
+&kp LCTRL  &kp Z                       &kp X         &kp C       &kp V             &kp B                                                                      &kp HOME      &kp PG_UP                                                     &kp N      &kp M             &kp COMMA          &kp DOT          &kp FSLH            &kp RCTRL
+&mo 2      &kp LA(LC(LG(LEFT_SHIFT)))  &kp CAPS      &kp LEFT    &kp RIGHT                               &kp BSPC                                 &kp TAB     &kp END       &kp PG_DN  &kp ENTER   &kp SPACE                                         &kp UP            &kp DOWN           &kp KP_NUMBER_9  &kp KP_NUMBER_0     &mo 2
             >;
         };
 
         keypad {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                      &mo 3      &kp LEFT_PARENTHESIS   &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                       &none      &kp LEFT_BRACKET       &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LCTRL     &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp RIGHT_BRACKET      &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                           &kp HOME      &kp PG_UP                        &kp RIGHT_PARENTHESIS  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp KP_COMMA  &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0                         &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 2
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                               &mo 3      &kp LEFT_BRACE     &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                                &none      &kp LEFT_BRACKET   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
+&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI               &kp KP_N0  &none      &kp RIGHT_BRACKET  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp KP_COMMA
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                        &kp HOME      &kp LEFT_PARENTHESIS                         &kp RIGHT_BRACE    &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp TAB    &kp END       &kp RIGHT_PARENTHESIS  &kp ENTER  &kp SPACE                     &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 2
             >;
         };
 
