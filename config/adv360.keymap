@@ -325,6 +325,15 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
+
+        dollar_and_0: dollar_and_0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOLLAR_AND_0";
+            bindings = <&kp DOLLAR>, <&kp KP_NUMBER_0>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -351,11 +360,11 @@
 
         default_layer {
             bindings = <
-&kp GRAVE  &bang_at                    &under_minus  &pound_Ins  &lessthan_dollar  &greaterthan_percent  &tog 1                                                                                    &mo 3                                  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp EQUAL  &l_paren_caret   &r_paren_ampersand    &multiply_and_printscr
-&kp DEL    &q_and_1                    &w_and_2      &e_and_3    &r_and_4          &t_and_5              &kp RG(RC(RIGHT_SHIFT))                                                                   &kp LG(LC(LEFT_SHIFT))                 &y_and_6          &u_and_7           &i_and_8   &o_and_9         &p_and_0              &pipe_backslash
-&kp TAB    &kp A                       &kp S         &kp D       &kp F             &kp G                 &mt RG(RC(RIGHT_ALT)) RG(RC(RIGHT_ALT))  &kp LSHIFT  &kp LALT      &kp LGUI   &kp RSHIFT  &mt LG(LC(LEFT_ALT)) LG(LC(LEFT_ALT))  &kp H             &kp J              &kp K      &kp L            &colon_and_semicolon  &kp SQT
-&kp LCTRL  &kp Z                       &kp X         &kp C       &kp V             &kp B                                                                      &kp HOME      &kp PG_UP                                                     &kp N             &kp M              &kp COMMA  &kp DOT          &kp FSLH              &kp RCTRL
-&mo 2      &kp LA(LC(LG(LEFT_SHIFT)))  &kp CAPS      &kp LEFT    &kp RIGHT                               &kp BSPC                                 &kp ESCAPE  &kp END       &kp PG_DN  &kp ENTER   &kp SPACE                                                &kp UP             &kp DOWN   &kp KP_NUMBER_9  &kp KP_NUMBER_0       &mo 2
+&kp GRAVE  &bang_at                    &under_minus  &pound_Ins  &dollar_and_0  &greaterthan_percent  &tog 1                                                                                    &mo 3                                  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp EQUAL  &l_paren_caret   &r_paren_ampersand    &multiply_and_printscr
+&kp DEL    &q_and_1                    &w_and_2      &e_and_3    &r_and_4       &t_and_5              &kp RG(RC(RIGHT_SHIFT))                                                                   &kp LG(LC(LEFT_SHIFT))                 &y_and_6          &u_and_7           &i_and_8   &o_and_9         &p_and_0              &pipe_backslash
+&kp TAB    &kp A                       &kp S         &kp D       &kp F          &kp G                 &mt RG(RC(RIGHT_ALT)) RG(RC(RIGHT_ALT))  &kp LSHIFT  &kp LALT      &kp LGUI   &kp RSHIFT  &mt LG(LC(LEFT_ALT)) LG(LC(LEFT_ALT))  &kp H             &kp J              &kp K      &kp L            &colon_and_semicolon  &kp SQT
+&kp LCTRL  &kp Z                       &kp X         &kp C       &kp V          &kp B                                                                      &kp HOME      &kp PG_UP                                                     &kp N             &kp M              &kp COMMA  &kp DOT          &kp FSLH              &kp RCTRL
+&mo 2      &kp LA(LC(LG(LEFT_SHIFT)))  &kp CAPS      &kp LEFT    &kp RIGHT                            &kp BSPC                                 &kp ESCAPE  &kp END       &kp PG_DN  &kp ENTER   &kp SPACE                                                &kp UP             &kp DOWN   &kp KP_NUMBER_9  &kp KP_NUMBER_0       &mo 2
             >;
         };
 
