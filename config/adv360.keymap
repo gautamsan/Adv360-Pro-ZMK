@@ -131,7 +131,7 @@
         dollar_and_0: dollar_and_0 {
             compatible = "zmk,behavior-mod-morph";
             label = "DOLLAR_AND_0";
-            bindings = <&kp DOLLAR>, <&kp KP_NUMBER_0>;
+            bindings = <&kp DOLLAR>, <&kp N0>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -220,11 +220,11 @@
 
         keypad {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                               &mo 3      &kp LEFT_BRACE     &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE   &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                                &none      &kp LEFT_BRACKET   &kp KP_N7   &kp KP_N8     &kp KP_N9       &kp KP_MINUS     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI               &kp KP_N0  &none      &kp RIGHT_BRACKET  &kp KP_N4   &kp KP_N5     &kp KP_N6       &kp KP_PLUS      &kp APOS
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                        &kp HOME      &kp LEFT_PARENTHESIS                         &kp RIGHT_BRACE    &kp KP_N1   &kp KP_N2     &kp KP_N3       &kp KP_ENTER     &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp TAB    &kp END       &kp RIGHT_PARENTHESIS  &kp ENTER  &kp SPACE                     &kp UP      &kp DOWN      &dot_and_comma  &kp RBKT         &mo 2
+&kp LC(NUMBER_6)  &kp LC(N1)  &kp LC(N2)                  &kp LC(N3)        &kp LC(N4)        &kp LC(N5)  &trans                                                                                   &mo 3                   &kp LEFT_BRACE     &kp KP_NUM    &kp EQUAL     &kp SLASH                    &kp STAR        &kp PIPE
+&kp DELETE        &kp LC(Q)   &kp LC(W)                   &kp LS(N8)        &kp LS(N7)        &kp LC(T)   &kp RG(RC(RIGHT_SHIFT))                                                                  &kp LG(LC(LEFT_SHIFT))  &kp LEFT_BRACKET   &kp N7        &kp N8        &kp N9                       &kp MINUS       &kp BSLH
+&kp TAB           &kp LC(A)   &kp LS(NUMBER_6)            &kp LS(N5)        &kp LS(NUMBER_4)  &kp LC(G)   &kp RC(RG(RIGHT_ALT))    &kp LEFT_SHIFT  &kp LALT      &kp LGUI               &kp N0     &kp LC(LG(LEFT_ALT))    &kp RIGHT_BRACKET  &kp NUMBER_4  &kp N5        &kp NUMBER_6                 &kp PLUS        &kp APOS
+&kp LCTRL         &kp LC(Z)   &kp LS(NUMBER_3)            &kp LS(NUMBER_2)  &kp LS(NUMBER_1)  &kp LC(V)                                            &kp HOME      &kp LEFT_PARENTHESIS                                      &kp RIGHT_BRACE    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3                 &dot_and_comma  &kp RSHFT
+&mo 2             &kp CAPS    &kp LA(LC(LG(LEFT_SHIFT)))  &kp LEFT          &kp RIGHT                     &kp BSPC                 &kp ESCAPE      &kp END       &kp RIGHT_PARENTHESIS  &kp ENTER  &kp SPACE                                  &kp UP        &kp DOWN      &kp RA(RC(RG(RIGHT_SHIFT)))  &kp COMMA       &mo 2
             >;
         };
 
