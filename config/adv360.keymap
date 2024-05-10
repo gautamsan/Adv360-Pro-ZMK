@@ -230,11 +230,11 @@
 
         fn {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
+&kp F1  &kp F2         &kp F3         &kp F4         &kp F5         &kp F6         &tog 1                                      &mo 3   &kp F7         &kp F8         &kp F9         &kp F10        &kp F11                &kp F12
+&trans  &trans         &trans         &trans         &trans         &trans         &none                                       &none   &trans         &trans         &trans         &trans         &trans                 &trans
+&trans  &kp LC(LA(A))  &kp LC(LA(S))  &kp LC(LA(D))  &kp LC(LA(F))  &kp LC(LA(G))  &none   &trans  &trans      &trans  &trans  &none   &kp RC(RA(H))  &kp RC(RA(J))  &kp RC(RA(K))  &kp RC(RA(L))  &kp RC(RA(SEMICOLON))  &trans
+&trans  &trans         &trans         &trans         &trans         &trans                         &trans      &trans                  &trans         &trans         &trans         &trans         &trans                 &trans
+&trans  &trans         &trans         &trans         &trans                        &trans  &trans  &trans      &trans  &trans  &trans                 &trans         &trans         &trans         &trans                 &trans
             >;
         };
 
